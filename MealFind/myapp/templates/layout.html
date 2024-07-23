@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prepify</title>
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/95040bde6c.js" crossorigin="anonymous"></script>
+  <script src="{% static 'js/script.js' %}" defer></script>
+</head>
+<body>
+  <div class="navbar">
+    <div class="navbar-brand">Prepify</div>
+    <div class="navbar-links">
+      <a href="/" class="nav-link">Home</a>
+      <a href="/explore" class="nav-link">Explore</a>
+      <a href="/create" class="nav-link">Create</a>
+    </div>
+    <div class="search-dropdown">
+      <input type="text" id="searchInput" placeholder="🔍 Search Recipes" />
+      <div class="recentSearch" id="dropdownContent">
+        <a href="#">Option 1</a>
+        <a href="#">Option 2</a>
+        <a href="#">Option 3</a>
+      </div>
+    </div>
+     <div class="dropdown">
+      <button class="dropbtn" onclick="toggleDropdown()">DP</button>
+      <div class="dropdown-content" id="myDropdown">
+        <h1 class = userNameHead>Username</h1>
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </div> 
+    <div>
+      <div class ="center">
+        <button id="show-login">Login</button>
+       </div>
+       <div class="popup">
+           <div class="close-btn">x</div>
+           <div class ="form">
+               <h2>Login</h2>
+               <div class="form-element">
+                   <label for="email">Email</label>
+                   <input type="text" id = "email" placeholder="Enter email">
+               </div>
+               <div class ="form-element">
+                   <label for="password">Password</label>
+                   <input type="password" id="password" placeholder="Enter password">
+               </div>
+               <div class="form-element">
+               <input type="checkbox" id ="remember">
+               <label for="remember">Remember me</label>
+            </div>
+               <div class="form-element">
+                   <button>Sign in</button>
+               </div>
+               <div class ="form-element">
+                   <a href="#">Forgot password</a>
+               </div>
+               <div class="form-element-sign">
+                 <a href="/register">Sign up</a>
+                </div>
+           </div>
+       </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="grid">
+      {% comment %} {% for meal in meal_plans %}
+      <div class="pin">
+        <img src="{{ meal.image }}" alt="{{ meal.title }}" />
+        <div class="title">{{ meal.title }}</div>
+      </div>
+      {% endfor %} {% endcomment %}
+    </div>
+  </div>
+</body>
+</html>

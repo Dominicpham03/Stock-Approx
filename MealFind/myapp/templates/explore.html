@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% extends 'layout.html' %}
+
+{% block title %}
+    
+{% endblock %}
+
+{% block content %}
+{% comment %} <div class="container">
+    <div class="grid">
+      {% for meal in meal_plans %}
+      <div class="pin">
+        <img src="{{ meal.image }}" alt="{{ meal.title }}" />
+        <div class="title">{{ meal.title }}</div>
+      </div> {% endcomment %}
+      {% comment %} {% endfor %}
+    </div>
+  </div> {% endcomment %}
+
+{% endblock %}
